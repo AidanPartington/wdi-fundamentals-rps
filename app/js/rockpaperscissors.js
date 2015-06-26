@@ -46,25 +46,25 @@ function getWinner(playerMove,computerMove) {
             if (computerMove == 'rock') {
                 winner = 'draw'
             }   else if (computerMove == 'paper') {
-                winner = 'computerWins'
+                winner = 'computer'
             }   else {
-                winner = 'playerWins'
+                winner = 'player'
             }
         break;
         case 'paper': 
             if (computerMove == 'rock') {
-                winner = 'playerWins'
+                winner = 'player'
             }   else if (computerMove == 'paper') {
                 winner = 'draw'
             }   else {
-                winner = 'computerWins'
+                winner = 'computer'
             }
         break;
         case 'scissor': 
             if (computerMove == 'rock') {
-                winner = 'computerWins'
+                winner = 'computer'
             }   else if (computerMove == 'paper') {
-                winner = 'playerWins'
+                winner = 'player'
             }   else {
                 winner = 'draw'
             }
@@ -80,7 +80,41 @@ function playToFive() {
     var playerWins = 0;
     var computerWins = 0;
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
-    /* YOUR CODE HERE */
-    return [playerWins, computerWins];
+    // This function should continue to play Rock Paper Scissors until either the
+    // player or the computer has won five times.
+    // After each 'round', display some text in the console indicating who played
+    // what, who won, and what the current scoreboard looks like.
+    // For example,
+    //  console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
+    //  console.log('The score is currently ' + playerWins + ' to ' + computerWins + '\n');
+    var = overallWinner 
+    console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
+    switch (winner) {
+        case 'player': 
+            playerWins += 1;
+            console.log('Player wins round');
+        break;
+        case 'computer': 
+            computerWins += 1;
+            console.log('Player wins round');
+        break;
+        case 'draw': 
+            console.log('The round is a draw');
+        break;
+        default:
+    }
+    if ((playerWins >= 5) || (computerWins >= 5)) {
+        if (playerWins > computerWins) {
+            overallWinner = 'Player is the overall Winner'
+        }
+        else {
+            overallWinner = 'Computer is the overall Winner' 
+        }
+    } else {
+        console.log('The score is currently, Player wins:' + playerWins + ' to Computer wins: ' + computerWins + '\n');
+        console.log('We are playing first to 5 wins, play again')
+        function getPlayerMove(move)
+    }
+    return overallWinner;
 }
 
